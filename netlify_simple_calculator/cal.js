@@ -10,13 +10,14 @@ function removeLeadingZeros(res)
 function appendToResult(val)
 {
     let res=document.getElementById("result").innerHTML;
+    res=removeLeadingZeros(res);
     res+=val;
     document.getElementById("result").innerHTML=res;
 }
 function compute()
 {
     let x=document.getElementById("result").innerHTML;
-    x=removeLeadingZeros(x);
+
     x=eval(x);
 
     document.getElementById("result").innerHTML=x;
