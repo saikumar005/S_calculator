@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>calculator</title>
+		<script src="cal.js"></script>
+		<style>
+			div#calculator{
+				border:2px solid black;
+				height:auto;
+				width:fit-content;
+				margin:auto;
+			}
+			div#result{
+				font-size: 30px;
+				border:1px solid blue;
+				height:40px;
+				width:290px;
+			}
+			button{
+				background-image: linear-gradient(yellow,blue,white);
+				padding:3px;
+				font-size:30px;
+				width:65px;
+				margin:3px;
+				background-color: rgb(45, 173, 173);
+				color:black;
+			}
+			h1{
+				color:white;
+				background-image:radial-gradient(red,blue,black);
+			}
+		</style>
+	</head>
+		<body>
+			<center><h1>SIMPLE CALCULATOR</h1></center>
+			<div id="calculator">
+				<div id="result"></div>
+				<button onclick='appendToResult("1")' onkeypress="appendToResult()">1</button>
+				<button onclick="appendToResult('2')" >2</button>
+				<button onclick="appendToResult('3')" >3</button>
+				<button onclick="appendToResult('4')" >4</button><br>
+				<button onclick="appendToResult('5')" >5</button>
+				<button onclick="appendToResult('6')" >6</button>
+				<button onclick="appendToResult('7')" >7</button>
+				<button onclick="appendToResult('8')" >8</button><br>
+				<button onclick="appendToResult('9')" >9</button>
+				<button onclick="appendToResult('0')" >0</button>
+				<button onclick="appendToResult('+')" >+</button>
+				<button onclick="appendToResult('-')" >-</button><br>
+				<button onclick="appendToResult('*')" >*</button>
+				<button onclick="appendToResult('/')" >/</button>
+				<button onclick="compute()" >=</button>
+				<button onclick="clearScreen()" id="clear" >C</button>
+			</div>
+	</body>
+</html>
